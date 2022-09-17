@@ -80,11 +80,13 @@ fn main() {
             {ball.speed.y = -1.0*ball.speed.y;
             last_speed = ball.speed;}
 
+            
         else {frame_count +=1;}
 
         if pause {
             ball.speed = Vector2::new(0.0, 0.0);
-            d.draw_text("PAUSE", (SCREEN_WIDTH / 2.0 -45.0) as i32, (SCREEN_HEIGHT / 2.0-30.0) as i32, 30, Color::GREEN);}
+            d.draw_text("PAUSE", (SCREEN_WIDTH / 2.0 -45.0) as i32, (SCREEN_HEIGHT / 2.0-30.0) as i32, 30, Color::GREEN);
+        }
 
         if ball.position.x <= goal1.size as f32 && ball.position.y <= goal1.size as f32 {
             d.clear_background(Color::WHITE);
